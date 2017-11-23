@@ -52,9 +52,13 @@ footer {
 
 #author {
   text-align: right;
+  font-style: bold;
+  font-size: 18px;
 }
 
 #tim {
+  font-size: 14px;
+  margin-top: 10px;
   clear: both;
   text-align: center;
 }
