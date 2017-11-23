@@ -1,4 +1,61 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
 p {
   text-align: center;
+}
+
+p::selection {
   color: red;
+}
+
+header {
+  font-family: 'Roboto Slab', serif;
+  background-color: #254B9F;
+  color: white;
+  padding: 20px 200px;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 50px 200px;
+}
+
+article {
+  padding: 10px 200px;
+  margin-bottom: 30px;
+}
+
+span{
+  display: block;
+}
+
+footer {
+  clear: both;
+  background-color: #353535;
+  color: #EEEEEE;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.header-p {
+  color: white;
+}
+
+.tim-pic {
+  float: right;
+  width: 800px;
+  display: block;
+}
+
+#author {
+  text-align: right;
+}
+
+#tim {
+  clear: both;
+  text-align: center;
+  margin-top: 20px;
 }
