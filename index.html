@@ -28,21 +28,39 @@
     <br><span id="tim">Sir Tim Bernes-Lee, father of the Web</span>
   </article>
 
-  <footer>
+  <footer class="footer">
 
     <p>Do you like to know more about programming?</p>
     <p>Send me a messege!</p>
 
-    <form action="second.html">
-      <input type="text" name="first-name" placeholder="First-name"><br>
-      <input type="text" name="last-name" placeholder="Last-name"><br>
-      <input type="email" name="email" placeholder="Your best email here..."><br>
+    <div class="container">
+      <div class="contact">
+        <form class="form">
+          <div class="col1">
+            <label for="name">What's your name?</label>
+            <input type="text" required id="name" name="name"/>
+            <label for="email">Your best e-mail!</label>
+            <input type="email" required id="email" name="email"/>
+            <div class="sex">
+              <label for="woman">
+                <input type="radio" id="woman" checked name="sex" value="woman"> woman
+              </label>
+              <label for="man">
+                <input type="radio" id="man" name="sex" value="man"> man
+              </label>
+            </div>
+          </div>
+          <div class="col2">
+            <label for="coments">Your messege here...</label>
+            <textarea name="comants" id="coments" cols="30" rows="7"></textarea>
+            <input type="submit" value="Enviar" class="button"/>
+          </div>
+        </form>
+        <span>Simple HTML page created by Emi Castro</span>
+        <a href="https://github.com/EmiCastro"">Github</a>
+     </div>
+    </div>
 
-      <textarea value="messege" rows="20" >Your messege here...</textarea><br>
-      <input type="submit" name="submit">
-    </form>
-    <br><span>Simple HTML page created by Emi Castro</span><br>
-    <a href="https://github.com/EmiCastro"">Github</a>
   </footer>
 </body>
 </html>

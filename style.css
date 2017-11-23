@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: #EEE;
 }
 
 p {
@@ -28,14 +29,14 @@ article {
   margin-bottom: 30px;
 }
 
-span{
+span {
   display: block;
 }
 
 footer {
   clear: both;
   background-color: #353535;
-  color: #EEEEEE;
+  color: #EEE;
   padding-top: 30px;
   padding-bottom: 20px;
 }
@@ -45,7 +46,6 @@ footer {
 }
 
 .tim-pic {
-  float: right;
   width: 800px;
   display: block;
 }
@@ -57,5 +57,67 @@ footer {
 #tim {
   clear: both;
   text-align: center;
-  margin-top: 20px;
+}
+
+.contact {
+  width: 300px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact span {
+  margin-top: 10px;
+}
+
+.contact a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 10px;
+  color: #FECA2F;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.form {
+  display: flex;
+  width: 400px;
+  color: white;
+}
+
+.col1, .col2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.col1 {
+  margin-right: 15px;
+}
+.col2 {
+  align-items: flex-start;
+}
+
+.col2 .button {
+  margin-top: 15px;
+  width: 200px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  background: linear-gradient(to left, #fe344e, #ff7250);
+}
+
+.sex {
+  margin-top: 10px;
+}
+
+#name {
+  margin-bottom: 1em;
 }
