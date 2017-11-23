@@ -38,7 +38,6 @@ footer {
   background-color: #353535;
   color: #EEE;
   padding-top: 30px;
-  padding-bottom: 20px;
 }
 
 .header-p {
@@ -70,11 +69,18 @@ footer {
   justify-content: center;
 }
 
-.contact span {
+.footer-base {
+  background-color: #131313;
   margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.contact a {
+.footer-base span {
+  text-align: center;
+}
+
+.footer-base a {
   display: flex;
   justify-content: center;
   text-decoration: none;
