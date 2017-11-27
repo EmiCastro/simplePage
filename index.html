@@ -7,14 +7,69 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="jquery-3.2.1.js"></script>
+
   <script>
+
+
+
     $(document).ready(function() {
+      // mostrarMensajeDelDia();
+
+      $('#f').submit( function(event) {
+        event.preventDefault();
+        const arr = ($(this).serializeArray());
+        console.log(arr);
+        convertir(arr);
+      });
 
     });
 
-    $('.header-p').click(function(){
-      alert('Hola');
-    });
+
+    function convertir(arr) {
+      const user = {};
+
+      arr.forEach((elemento) => {
+        user[elemento.name] = elemento.value;
+
+     });
+     console.log(user);// statements
+    };
+
+
+
+    function mostrarMensajeDelDia() {
+        var date = $.ajax({
+          url: "https://api.timezonedb.com/v2/get-time-zone",
+          data: {
+            key: 'LSYO57WOXUVD',
+            format: 'json',
+            by: 'zone',
+            zone: 'America/Argentina/Buenos_Aires'
+          },
+          type: "GET",
+          dataType: "json"
+        })
+
+        .done(function(json){
+
+          window.alert('Hola, la fecha de hoy es ' + json.formatted);
+        })
+
+        .fail(function(xhr, status, errorThrown) {
+          window.alert('Hola, no se la hora');
+          console.log(status);
+          console.log(errorThrown);
+          console.log(xhr);
+        })
+
+        .always(function(xhr, status){
+          console.log(status);
+          console.log(xhr);
+        })
+
+
+    };
+
   </script>
 </head>
 <body>
@@ -45,7 +100,7 @@
 
     <div class="container">
       <div class="contact">
-        <form class="form" action="second.html">
+        <form class="form" id="f" action="second.html">
           <div class="col1">
             <label for="name">What's your name?</label>
             <input type="text" required id="name" name="name"/>
